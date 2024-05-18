@@ -59,6 +59,8 @@ body {
 
 
 
+
+
 .contenedor-medio{
     margin-top: 20px;
     display: flex;
@@ -79,15 +81,22 @@ body {
     flex:11
 
 }
+
         /*clases articulos*/
 .articulos{
     background-color: azure;
-    border: solid 4px black;
+    border: solid 4px rgb(116, 116, 116);
     padding: 5px;
     margin:6px
 
 }
 
+
+.contenido-articulo{
+    background-color: rgb(94, 93, 93);
+    padding: 1%;
+
+}
 
 /*contenedor */
 .contenedor-aside{
@@ -99,6 +108,16 @@ body {
     align-items: left;
     flex-grow: 1; /* Permite que el elemento crezca */
 
+}
+
+/*menu aside*/
+#menu{
+    display: flex;
+    flex-direction: column;
+}
+
+.recuadros-menu-aside{
+    background-color: aliceblue;
 }
 
         /*contenido aside right*/
