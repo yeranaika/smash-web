@@ -1,0 +1,78 @@
+body {
+    background-color: red;
+    background-image: url('/resours/img/fondos/fondo-pag.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover; /* Ajusta la imagen al tamaño de la ventana */
+    background-position: center bottom; /* Coloca la imagen en la parte inferior */
+}
+
+/*fuentes descargadas*/
+@font-face {
+    font-family: ACME-regular ;
+    src: url("/resours/img/fonts-(offline)/ACME-regular/Acme-Regular.ttf");
+}
+
+/*estilo principal */
+
+.contenedor-header{
+    display:flex;
+    align-items: center;
+    gap: 20px ;
+    border: solid thin black;
+    background-color: rgb(53, 53, 53) ;
+}
+
+#titulo{
+    display: flex;
+    font-family: "ACME-regular";
+    background-color: aliceblue;
+    border: solid thin black;
+    padding:1%;
+    text-decoration: solid;
+}
+
+#icono{
+    display: flex;    
+    justify-content: center; /* Centra los elementos hijos horizontalmente */
+    background-color: rgb(255, 255, 255);
+    width: 50px;
+    height: 50px;
+    min-height: 5px;
+    min-width: 5px ;
+    margin-left: 20px;
+    padding: 1% ;
+    border: solid thin black;
+}
+
+
+
+.comtenedor-medio{
+    display: flex;
+    border: solid thin black;
+    justify-content: space-between; /* Distribuye los elementos de orilla a orilla */
+
+}
+
+.comtenedor-main{
+    display: flex;
+    background-color: rgb(105, 105, 105);
+    border: solid thin black;
+    align-items: center;
+    
+
+}
+
+    
+.comtenedor-aside{
+    display: flex;
+    border: solid thin black;
+    align-items: left;
+
+}
+
+
+
+
+
+
