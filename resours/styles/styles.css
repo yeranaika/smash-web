@@ -4,13 +4,21 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover; /* Ajusta la imagen al tamaño de la ventana */
-    background-position: center bottom; /* Coloca la imagen en la parte inferior */
+    background-position: right bottom; /* Coloca la imagen en la parte inferior */
 }
 
 /*fuentes descargadas*/
 @font-face {
     font-family: ACME-regular ;
+    font-weight: 400;
+    font-style: normal;
     src: url("/resours/img/fonts-(offline)/ACME-regular/Acme-Regular.ttf");
+}
+@font-face {
+    font-family: micro5-regular ;
+    font-weight: 400;
+    font-style: normal;
+    src: url("/resours/img/fonts-(offline)/micro5-regular/Micro5-Regular.ttf")
 }
 
 /*estilo principal */
@@ -19,15 +27,18 @@ body {
     display:flex;
     align-items: center;
     gap: 20px ;
+    position: sticky;
     border: solid thin black;
-    background-color: rgb(53, 53, 53) ;
+    background-color: rgb(224, 176, 176) ;
 }
 
 #titulo{
     display: flex;
     font-family: "ACME-regular";
+    font-size: 200%;
     background-color: aliceblue;
-    border: solid thin black;
+    border: solid 4px black;
+    box-shadow: 1px 1px 5px rgb(29, 29, 29);
     padding:1%;
     text-decoration: solid;
 }
@@ -42,35 +53,77 @@ body {
     min-width: 5px ;
     margin-left: 20px;
     padding: 1% ;
-    border: solid thin black;
+    border: solid 4px black;
+    box-shadow: 1px 1px 5px rgb(29, 29, 29);
 }
 
 
 
-.comtenedor-medio{
+.contenedor-medio{
+    margin-top: 20px;
     display: flex;
+    gap: 30px ;
+
     border: solid thin black;
     justify-content: space-between; /* Distribuye los elementos de orilla a orilla */
 
 }
 
-.comtenedor-main{
+
+/*contenedor main*/
+.contenedor-main{
     display: flex;
-    background-color: rgb(105, 105, 105);
-    border: solid thin black;
-    align-items: center;
-    
+    flex-direction: column;
+    border: solid 2px black;
+    flex-grow: 1; /* Permite que el elemento crezca */
+    flex:11
+
+}
+        /*clases articulos*/
+.articulos{
+    background-color: azure;
+    border: solid 4px black;
+    padding: 5px;
+    margin:6px
 
 }
 
-    
-.comtenedor-aside{
+
+/*contenedor */
+.contenedor-aside{
     display: flex;
+    flex-direction: column;
+    background-color: rgb(105, 105, 105);
+    padding: 10px;
     border: solid thin black;
     align-items: left;
+    flex-grow: 1; /* Permite que el elemento crezca */
 
 }
 
+        /*contenido aside right*/
+.titulo-aside{
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+
+    border: solid 4px black;
+
+}
+
+
+
+
+
+.titulos-articulo{
+    background-color: azure;
+    font-family: "micro5-regular";
+    font-size: 30px;
+    text-align: center;
+    margin-left: 10px;
+    
+}
+
+/*fuentes aplicadas*/
 
 
 
