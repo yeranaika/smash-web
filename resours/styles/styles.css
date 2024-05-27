@@ -26,6 +26,34 @@ body {
     src: url("/resours/img/fonts-(offline)/rammetonOne-regular/RammettoOne-Regular.ttf")
 }
 
+@font-face {
+    font-family: jaro ;
+    font-style: normal;
+    src: url("/resours/img/fonts-(offline)/Jaro/Jaro-Regular-VariableFont_opsz.ttf")
+}
+
+@font-face {
+    font-family: Stick_No_Bills ;
+    font-optical-sizing: auto;
+    font-style: normal;
+    src: url("/resours/img/fonts-(offline)/Jaro/Jaro-Regular-VariableFont_opsz.ttf")
+}
+
+@font-face {
+    font-family: Sofadi_One ;
+    font-optical-sizing: auto;
+    font-style: normal;
+    src: url("/resours/img/fonts-(offline)/Jaro/Jaro-Regular-VariableFont_opsz.ttf")
+}
+
+@font-face {
+    font-family: tillana ;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    src: url("/resours/img/fonts-(offline)/Tillana/Tillana-Medium.ttf")
+}
+
 .contenedor-header{
     display:flex;
     align-items: center;
@@ -91,6 +119,22 @@ body {
     flex:11;
 }
 
+.contenedor-com-art{
+    display: flex;
+    flex-direction: row;
+    gap: 15px ;
+}
+
+.img-art {
+    padding: 8px;
+    min-width: 150px;
+    min-height: 150px;
+    max-width: 180px;
+    max-height: 180px;
+    align-items:flex-end;
+    background-color: rgb(0, 0, 0);
+}
+
 .articulos{
     background-color: rgb(116, 115, 115);
     border: solid 4px rgb(0, 0, 0);
@@ -99,6 +143,7 @@ body {
 }
 
 .contenido-articulo{
+    font-family: tillana ;
     display:flex;
     flex-direction: row;
     background-color: rgb(225, 225, 225);
@@ -126,6 +171,7 @@ body {
 
 /*recuadro menu */
 .recuadros-menu-aside{
+    font-family: Stick_No_Bills ;
     display: flex;
     background-color: aliceblue;
     justify-content: center;
@@ -144,6 +190,7 @@ body {
 
 /*menu desplegable pesronaje */
 .recuadros-menu-des-aside{
+    font-family: Stick_No_Bills ;
     display: flex;
     background-color: rgb(248, 169, 169);
     justify-content: center;
@@ -204,19 +251,99 @@ body {
     border: solid 4px black;
     text-decoration: none;
     color: inherit;
-    transition: background-color 0.3s;
+    transition: background-color 10s;
 }
 
 .recuadros-menu-inferior:hover {
     background-color: #ddd;
 }
 
+/*tanblas del inicio*/
+.estilo-tabla-principal{
+    width: 100%;
+    border-collapse: collapse;
+    border: solid 5px black;
+    margin: 25px 0;
+    font-size: 18px;
+    text-align: left;
+}
+
+.estilo-dentro-tabla-tr{
+    font-family: jaro ;
+    text-shadow:
+     2px 2px 0 #000, 
+    -2px 2px 0 #000, 
+     2px -2px 0 #000, 
+    -2px -2px 0 #000,
+     2px 0 0 #000, 
+    -2px 0 0 #000, 
+     0 2px 0 #000, 
+     0 -2px 0 #000;
+    font-size: 20px;
+    background-color: #980202;
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+}
+
+/*tamaño tabla*/
+.estilo-tabla-principal th,
+.estilo-tabla-principal td {
+    padding: 10px 10px;
+    align-items: center;
+    border: 4px solid #000000;
+}
+
+.titulo-juego-tabla{
+    min-width: 160px;
+    background-color: rgb(227, 227, 227);
+}
+
+.historia-juegos-tabla{
+    background-color: rgb(227, 227, 227);
+    font-family: tillana ;
+    align-items: center;
+}
+
+.contenedor-img-tabla{
+    background-color: rgb(227, 227, 227);
+    font-family: tillana ;
+    align-items: center;
+}
+
+/* Alineación de imágenes */
+.imagen-juego-tabla {
+    display:flex;
+    text-align: center; /* Centrar horizontalmente */
+    vertical-align: middle; /* Centrar verticalmente */
+    max-width: 180px;
+    max-height: 180px;
+}
+
+
+
+
+.img-tabla-inicio {
+    padding: 5px;
+    min-width: 150px;
+    min-height: 150px;
+    max-width: 180px;
+    max-height: 180px;
+    align-items:flex-end;
+    background-color: rgb(0, 0, 0);
+}
+
+
+
+
 /*funetes y formato titiulos*/
 .titulo-aside{
+    font-family: jaro ;
     display: flex;
     text-align: center;
     justify-content: center;
     background-color: rgb(255, 255, 255);
+    padding: 5px;
     width: 130px;
     height: 25px;
     border: solid 4px black;
