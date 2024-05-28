@@ -20,59 +20,27 @@
 
 <!-- contenedor -->
 <div class="contenedor-medio">
-    <main class="contenedor-main">
+    <main class="contenedor-formulario">
     
-
-                <!-- articulos -->
-        
-                <article >
-                    <h3 class="titulos-articulo">"infomacionde los smash"</h3>
-                    <div class="contenedor-com-art">
-                        <table class="estilo-tabla-principal">
-
-                            <!-- linea cabezal tabla -->
-                            <thead>
-                                <tr class="estilo-dentro-tabla-tr">
-                                    <th>juegos</th>
-                                    <th>historia</th>
-                                    <th>imagen</th>
-                                </tr>
-                            </thead>
-
-                            <!-- linea de tabla -->
-                            <tbody>
-                                <tr class=>
-                                    <td class="titulo-juego-tabla">super smash bros n64</td>
-                                    <td class="historia-juegos-tabla" class="font-contenido">super smash bros es un videojuego lanzado para Nintendo 64 creado por HAL Laboratory Inc. y lanzado por Nintendo. Es el primer juego de la serie, donde varios personajes de las franquicias de Nintendo pelean entre sí en diferentes localizaciones con varios objetos para lograr la victoria. A diferencia de varios juegos de pelea de la época, este era uno de los pocos que permitía jugar 4 jugadores simultáneos, siendo una de las claves de su éxito.</td>
-
-                                    <td class="contenedor-img-tabla">
-                                        <img class="imagen-juego-tabla" src="resours/img/portadas juegos/supersmashportada1999.jpg" >
-                                    </td>
-                                </tr>
-                            <!-- linea de tabla -->
-                                <tr>
-                                    <td class="titulo-juego-tabla">super smash bros mele</td>
-                                    <td class="historia-juegos-tabla" class="font-contenido">Super Smash Bros. Melee es un videojuego para GameCube exitoso debido a que mezcla varios personajes de Nintendo. El juego se centra en distintos personajes de franquicias de juegos de Nintendo, tales como Mario Bros, Kirby, Star Fox, Pokémon, The Legend of Zelda, entre otros. Los escenarios y modos de juego hacen referencia, o toman sus diseños desde juegos populares lanzados por Nintendo. </td>
-
-                                    <td class="contenedor-img-tabla">
-                                        <img class="imagen-juego-tabla" src="resours/img/portadas juegos/SuperSmashBrosMelee2001.png" >
-                                    </td>
-                                </tr>
-                            <!-- linea de tabla -->
-                                <tr>
-                                    <td class="titulo-juego-tabla">super smash bros n64</td>
-                                    <td class="historia-juegos-tabla" class="font-contenido">Super Smash Bros Brawel es un videojuego de lucha para la videoconsola Wii. Proviene de la saga de videojuegos Super Smash Bros., muy exitosa por mezclar personajes de Nintendo. Este tercer juego es el primero que incluye personajes de franquicias externas a Nintendo, con la inclusión de Solid Snake de la saga Metal Gear de Konami y Sonic the Hedgehog de la saga Sonic the Hedgehog de SEGA. El comentarista con voces en español para decir los nombres de los personajes, entre otros, es Juan Carlos López, siendo el mismo actor de doblaje para Lucario en el juego.  </td>
-
-                                    <td class="contenedor-img-tabla">
-                                        <img class="imagen-juego-tabla" src="resours/img/portadas juegos/SuperSmashBrosBrawel(2008).webp" >
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        
-
-                    </div>
-                </article>
+        <form class="formulario-contacto">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            
+            <label for="correo">Correo de contacto:</label>
+            <input type="email" id="correo" name="correo" required>
+            
+            <label for="comentario">Tipo de comentario:</label>
+            <select id="comentario" name="comentario">
+                <option value="sugerencia">Sugerencia</option>
+                <option value="pregunta">Pregunta</option>
+                <option value="otro">Otro</option>
+            </select>
+            
+            <label class="stylo-font-contacto" for="mensaje">Comentario:</label>
+            <textarea id="mensaje" class="recuadro-mensaje" name="mensaje" rows="10" required></textarea>
+            
+            <button type="submit">Enviar</button>
+        </form>
         
     </main>
 
@@ -89,7 +57,7 @@
                     <a class="recuadros-menu-des-aside" href="/personajes/Super-Smash-Bros-Melee.(2001).html">Super Smash Bros. Melee (2001)</a>
                 </div>
             </div>
-            <a class="recuadros-menu-aside" href="">Contacto</a>
+            <a class="recuadros-menu-aside" href="/contacto.html">Contacto</a>
         </div>
     </aside>
 
@@ -97,10 +65,6 @@
 
 </div>
 
-<!--barra de navegacion inferior-->
-<nav>
-    <h3></h3>
-</nav>
 
 <footer></footer>
 
