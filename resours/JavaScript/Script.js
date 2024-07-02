@@ -28,6 +28,23 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
+    // Funcionalidad para mostrar y ocultar descripciones largas
+    document.querySelectorAll('.toggle-description').forEach(button => {
+        button.addEventListener('click', function () {
+            const shortDesc = this.previousElementSibling.previousElementSibling;
+            const longDesc = this.previousElementSibling;
+            if (longDesc.style.display === 'none' || !longDesc.style.display) {
+                longDesc.style.display = 'inline';
+                shortDesc.style.display = 'none';
+                this.textContent = 'Mostrar menos';
+            } else {
+                longDesc.style.display = 'none';
+                shortDesc.style.display = 'inline';
+                this.textContent = 'Mostrar más';
+            }
+        });
+    });
+
     // Funcionalidad para cargar personajes desde el localStorage
     const contenedorPersonajes = document.getElementById('contenedor-personajes');
     if (contenedorPersonajes) {
