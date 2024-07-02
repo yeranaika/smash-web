@@ -1,50 +1,84 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/resours/styles/styles.css">
     <title>Smash WIKI</title>
+    <style>
+        /* Estilos para la ventana emergente personalizada */
+        .modal {
+            display: none; 
+            position: fixed; 
+            z-index: 1; 
+            padding-top: 100px; 
+            left: 0;
+            top: 0;
+            width: 100%; 
+            height: 100%; 
+            overflow: auto; 
+            background-color: rgb(0,0,0); 
+            background-color: rgba(0,0,0,0.4); 
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .error-message {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
 </head>
+<body>
 <!--titulo web-->
 <header class="contenedor-header">
-    <a id="icono" href="/index.html"><img src="/resours/img/icono/icono-index.png" >
-    </a>
-    
+    <a id="icono" href="/index.html"><img src="/resours/img/icono/icono-index.png" ></a>
     <a id="titulo" href="/index.html">
         <h1>smash WIKI</h1>
     </a>
-
     <img class="imag-titulo" src="/resours/img/icono/logo.png" >
 </header>
 
 <!-- contenedor -->
 <div class="contenedor-medio">
     <main class="contenedor-formulario">
-    
-        <form class="formulario-contacto">
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" required>
-            
-            <label for="correo">Correo de contacto:</label>
-            <input type="email" id="correo" name="correo" required>
-            
-            <label for="comentario">Tipo de comentario:</label>
-            <select id="comentario" name="comentario">
-                <option value="sugerencia">Sugerencia</option>
-                <option value="pregunta">Pregunta</option>
-                <option value="otro">Otro</option>
-            </select>
-            
-            <label class="stylo-font-contacto" for="mensaje">Comentario:</label>
-            <textarea id="mensaje" class="recuadro-mensaje" name="mensaje" rows="10" required></textarea>
-            
-            <button type="submit">Enviar</button>
-        </form>
+    <!-- Formulario de contacto -->
+    <form class="formulario-contacto" id="contact-form">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre">
         
+        <label for="correo">Correo de contacto:</label>
+        <input type="text" id="correo" name="correo">
+        
+        <label for="comentario">Tipo de comentario:</label>
+        <select id="comentario" name="comentario">
+            <option value="sugerencia">Sugerencia</option>
+            <option value="pregunta">Pregunta</option>
+            <option value="otro">Otro</option>
+        </select>
+        
+        <label class="stylo-font-contacto" for="mensaje">Comentario:</label>
+        <textarea id="mensaje" class="recuadro-mensaje" name="mensaje" rows="10"></textarea>
+        
+        <button type="submit">Enviar</button>
+    </form>
     </main>
-
-
 
     <aside class="contenedor-aside">
         <h3 class="titulo-aside">Referencias</h3>
@@ -60,15 +94,88 @@
             <a class="recuadros-menu-aside" href="/contacto.html">Contacto</a>
         </div>
     </aside>
-
-
-
 </div>
 
+<!-- Ventana emergente -->
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <div id="modal-message"></div>
+  </div>
+</div>
 
 <footer></footer>
 
-<body>
-    
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const form = document.getElementById('contact-form');
+        const modal = document.getElementById("myModal");
+        const span = document.getElementsByClassName("close")[0];
+        const modalMessage = document.getElementById("modal-message");
+
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevenir el envío del formulario
+
+            const nombre = document.getElementById('nombre').value.trim();
+            const correo = document.getElementById('correo').value.trim();
+            const mensaje = document.getElementById('mensaje').value.trim();
+            let errorMessage = '';
+
+            if (!validateName(nombre)) {
+                errorMessage += '<p class="error-message">El nombre es obligatorio y debe tener al menos 3 caracteres.</p>';
+            }
+
+            const emailError = validateEmail(correo);
+            if (emailError) {
+                errorMessage += `<p class="error-message">${emailError}</p>`;
+            }
+
+            if (!validateMessage(mensaje)) {
+                errorMessage += '<p class="error-message">El comentario es obligatorio y debe tener al menos 10 caracteres.</p>';
+            }
+
+            if (errorMessage !== '') {
+                showModal(errorMessage);
+            } else {
+                showModal('<p>Formulario enviado correctamente</p>');
+                form.reset(); // Resetear el formulario después de la validación
+            }
+        });
+
+        function validateName(name) {
+            return name.length >= 3;
+        }
+
+        function validateEmail(email) {
+            if (!email.includes('@')) {
+                return 'El correo debe contener un @.';
+            } else if (!email.includes('.')) {
+                return 'El correo debe contener un dominio (por ejemplo, .com, .cl).';
+            } else if (!email.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) {
+                return 'El formato del correo no es válido.';
+            }
+            return '';
+        }
+
+        function validateMessage(message) {
+            return message.length >= 10;
+        }
+
+        function showModal(message) {
+            modalMessage.innerHTML = message;
+            modal.style.display = "block";
+        }
+    });
+</script>
 </body>
 </html>

@@ -19,33 +19,33 @@ body {
     font-family: micro5-regular ;
     font-weight: 400;
     font-style: normal;
-    src: url("/resours/img/fonts-(offline)/micro5-regular/Micro5-Regular.ttf")
+    src: url("/resours/img/fonts-(offline)/micro5-regular/Micro5-Regular.ttf");
 }
 @font-face {
     font-family: rammetonOne-regular ;
     font-weight: 400;
     font-style: normal;
-    src: url("/resours/img/fonts-(offline)/rammetonOne-regular/RammettoOne-Regular.ttf")
+    src: url("/resours/img/fonts-(offline)/rammetonOne-regular/RammettoOne-Regular.ttf");
 }
 
 @font-face {
     font-family: jaro ;
     font-style: normal;
-    src: url("/resours/img/fonts-(offline)/Jaro/Jaro-Regular-VariableFont_opsz.ttf")
+    src: url("/resours/img/fonts-(offline)/Jaro/Jaro-Regular-VariableFont_opsz.ttf");
 }
 
 @font-face {
     font-family: Stick_No_Bills ;
     font-optical-sizing: auto;
     font-style: normal;
-    src: url("/resours/img/fonts-(offline)/Jaro/Jaro-Regular-VariableFont_opsz.ttf")
+    src: url("/resours/img/fonts-(offline)/Jaro/Jaro-Regular-VariableFont_opsz.ttf");
 }
 
 @font-face {
     font-family: Sofadi_One ;
     font-optical-sizing: auto;
     font-style: normal;
-    src: url("/resours/img/fonts-(offline)/Jaro/Jaro-Regular-VariableFont_opsz.ttf")
+    src: url("/resours/img/fonts-(offline)/Jaro/Jaro-Regular-VariableFont_opsz.ttf");
 }
 
 @font-face {
@@ -53,26 +53,24 @@ body {
     font-optical-sizing: auto;
     font-weight: 600;
     font-style: normal;
-    src: url("/resours/img/fonts-(offline)/Tillana/Tillana-Medium.ttf")
+    src: url("/resours/img/fonts-(offline)/Tillana/Tillana-Medium.ttf");
 }
 
 /*================================================================================================*/
 
-.contenedor-header{
-    display:flex;
+.contenedor-header {
+    display: flex;
     align-items: center;
     justify-content: space-between; 
     width: 100%;
-    gap: 20px ;
+    gap: 20px;
     position: sticky;
     border: solid thin black;
     box-sizing: border-box; 
-    background-color: rgb(224, 176, 176) ;
-    box-sizing: border-box; 
+    background-color: rgb(224, 176, 176);
     padding: 10px;
-    min-width: 800px; 
+    min-width: 800px;
 }
-
 
 .contenedor-header a,
 .contenedor-header img,
@@ -81,9 +79,7 @@ body {
     text-align: center; 
 }
 
-
-
-#titulo{
+#titulo {
     background-color: aliceblue;
     display: flex;
     flex: 5;
@@ -96,87 +92,86 @@ body {
     color: inherit;
     border: solid 4px black;
     box-shadow: 1px 1px 5px rgb(29, 29, 29);
-    padding:1%;
+    padding: 1%;
     justify-content: center;
     align-items: center;
 }
 
-#icono{
+#icono {
     display: flex;
     justify-content: center;
     background-color: rgb(255, 255, 255);
     width: 80px;
     height: 80px;
     padding: 1%;
-    min-height:80px;
-    min-width: 80px ;
-    max-width:  80px;
+    min-height: 80px;
+    min-width: 80px;
+    max-width: 80px;
     max-height: 80px;
     margin-left: 20px;
     border: solid 4px black;
     box-shadow: 1px 1px 5px rgb(29, 29, 29);
 }
 
-.imag-titulo{
+.imag-titulo {
     border: solid 4px black;
     width: 180px;
     height: 100px;
-    flex:2;
-    max-width:180px ;
+    flex: 2;
+    max-width: 180px;
     max-height: 100px;
 }
 
-.contenedor-medio{
+.contenedor-medio {
     margin-top: 20px;
     display: flex;
-    gap: 15px ;
+    gap: 15px;
     justify-content: space-between;
-    align-items:baseline;
+    align-items: baseline;
 }
 
 /*================================================================================================*/
 
 /*contenedor main*/
-.contenedor-main{
+.contenedor-main {
     display: flex;
     flex-direction: column;
     border: solid 2px black;
     flex-grow: 1;
-    flex:11;
+    flex: 11;
 }
 
 .contenedor-com-art {
     display: flex;
-    gap:10px;
-    flex-direction: row;  
-    justify-content: space-between;  
-    align-items: center; 
+    gap: 10px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .img-art {
     display: flex;
-    ;
     padding: 8px;
     min-width: 150px;
     min-height: 150px;
     max-width: 150px;
     max-height: 150px;
-    align-items:flex-end;
+    align-items: flex-end;
     background-color: rgb(0, 0, 0);
 }
 
-.articulos{
+.articulos {
     background-color: rgb(116, 115, 115);
     border: solid 4px rgb(0, 0, 0);
     max-width: auto;
     max-height: 290px;
     padding: 10px;
-    margin:6px;
+    margin: 6px;
 }
 
-.contenido-articulo{
-    font-family: tillana ;
-    display:flex;
+.contenido-articulo {
+    font-family: tillana;
+    display: flex;
     width: 100%;
     min-width: 550px;
     min-height: 50px;
@@ -187,36 +182,35 @@ body {
     padding: 5px;
 }
 
-.contenedor-aside{
+.contenedor-aside {
     display: flex;
-    flex:1;
+    flex: 1;
     flex-direction: column;
     max-width: 190px;
     max-height: 900px;
-    margin-top: 10px ;
+    margin-top: 10px;
     background-color: rgb(105, 105, 105);
     border: solid 5px black;
     align-items: center;
 }
 
-.menu-aside{
+.menu-aside {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-
 /*================================================================================================*/
 
 /*recuadro menu */
-.recuadros-menu-aside{
-    font-family: Stick_No_Bills ;
+.recuadros-menu-aside {
+    font-family: Stick_No_Bills;
     display: flex;
     background-color: aliceblue;
     justify-content: center;
     align-items: center;
     padding: 10px;
-    margin: 4px ; 
+    margin: 4px;
     width: 100px;
     height: 30px;
     font-size: 18px;
@@ -227,15 +221,15 @@ body {
     color: inherit;
 }
 
-/*menu desplegable pesronaje */
-.recuadros-menu-des-aside{
-    font-family: Stick_No_Bills ;
+/*menu desplegable personaje */
+.recuadros-menu-des-aside {
+    font-family: Stick_No_Bills;
     display: flex;
     background-color: rgb(248, 169, 169);
     justify-content: center;
     align-items: center;
     padding: 10px;
-    margin: 4px ; 
+    margin: 4px;
     width: 100px;
     height: 60px;
     font-size: 16px;
@@ -272,13 +266,11 @@ body {
 
 /*================================================================================================*/
 
-
 /* Menú inferior */
 .menu-inferior {
     display: flex;
     justify-content: center;
     padding: 10px 0;
-    border-top: solid 4px black;
 }
 
 .recuadros-menu-inferior {
@@ -300,9 +292,8 @@ body {
 
 /*================================================================================================*/
 
-
 /*tablas del inicio*/
-.estilo-tabla-principal{
+.estilo-tabla-principal {
     width: 100%;
     border-collapse: collapse;
     border: solid 5px black;
@@ -311,8 +302,8 @@ body {
     text-align: left;
 }
 
-.estilo-dentro-tabla-tr{
-    font-family: jaro ;
+.estilo-dentro-tabla-tr {
+    font-family: jaro;
     text-shadow:
      2px 2px 0 #000, 
     -2px 2px 0 #000, 
@@ -329,12 +320,11 @@ body {
     font-weight: bold;
 }
 
-.titulo-superiror-tabla{
+.titulo-superior-tabla {
     border: solid 4px black;
 }
 
-
-.titulo-juego-tabla{
+.titulo-juego-tabla {
     min-width: 160px;
     background-color: rgb(227, 227, 227);
     padding: 10px 10px;
@@ -342,18 +332,18 @@ body {
     vertical-align: top; 
 }
 
-.historia-juegos-tabla{
+.historia-juegos-tabla {
     background-color: rgb(227, 227, 227);
     min-width: 400px;
     max-height: 3000px;
-    font-family: tillana ;
+    font-family: tillana;
     align-items: center;
     padding: 10px 10px;
     border: 4px solid #000000;
     vertical-align: top; 
 }
 
-.contenedor-img-tabla{
+.contenedor-img-tabla {
     position: relative;
     align-items: center;
     min-width: 200px;
@@ -366,7 +356,6 @@ body {
     padding: 10px 10px;
     border: 3px solid #000000;
     vertical-align: top; 
-    
 }
 
 /* Alineación de imágenes */
@@ -376,19 +365,17 @@ body {
     object-fit: cover; 
 }
 
-
 .img-tabla-inicio {
     padding: 5px;
     min-width: 150px;
     min-height: 150px;
     max-width: 180px;
     max-height: 180px;
-    align-items:flex-end;
+    align-items: flex-end;
     background-color: rgb(0, 0, 0);
 }
 
 /*================================================================================================*/
-
 
 /*stylo formulario*/
 .contenedor-formulario {
@@ -413,7 +400,6 @@ body {
 .formulario-contacto label {
     font-size: 18px;
     margin-bottom: 15px;
-    
 }
 
 .formulario-contacto input,
@@ -425,8 +411,8 @@ body {
     border: 1px solid #ccc;
     border-radius: 5px;
     width: 100%;
-    box-sizing: border-box; }
-    
+    box-sizing: border-box;
+}
 
 .formulario-contacto button {
     font-size: 18px;
@@ -439,21 +425,22 @@ body {
     text-align: center;
 }
 
-
-.recuadro-mensaje{
+.recuadro-mensaje {
     max-width: 100%;
     max-height: 200px;
     resize: none;
 }
 
-main label{
-    font-family: jaro ;
+main label {
+    font-family: jaro;
     font-size: 90px;
 }
+
 /*================================================================================================*/
-/*funetes y formato titiulos*/
-.titulo-aside{
-    font-family: jaro ;
+
+/*fuentes y formato titulos*/
+.titulo-aside {
+    font-family: jaro;
     display: flex;
     text-align: center;
     justify-content: center;
@@ -464,12 +451,220 @@ main label{
     border: solid 4px black;
 }
 
-
-.titulos-articulo{
+.titulos-articulo {
     background-color: azure;
     font-family: "micro5-regular";
     border: solid 4px rgb(0, 0, 0);
     font-size: 30px;
     text-align: center;
     margin-left: 10px;
+}
+
+/*================================================================================================*/
+
+/*contenedor main personajes*/
+.contenedor-medio_personajes {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+    justify-content: space-between;
+}
+
+.contenedor-main_personajes {
+    display: grid;
+    border: solid 2px black;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adaptación responsiva */
+    background-color: rgb(125, 125, 125);
+    color: #ffffff;
+    place-items: center;
+    align-items: start;
+    column-gap: 1em; /* Ajusta el espacio entre columnas */
+    row-gap: 1em; /* Ajusta el espacio entre filas */
+    width: 100%;
+    margin: auto;
+}
+
+
+.select-character {
+    margin-right: 10px;
+    transform: scale(1.5);
+    cursor: pointer;
+}
+
+
+
+.contenedor-medio-TODO-PER {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+
+.img-art_personajes {
+    width: 100%;
+    height: auto;
+    max-height: 250px;
+    object-fit: cover;
+}
+
+.contenido-articulo_personajes {
+    text-align: center;
+    margin-top: 1px;
+    font-size: 18px;
+    font-family: "Archivo Black", sans-serif;
+    border: #000;
+}
+
+.mas-texto {
+    padding: 8px;
+    margin-top: 10px;
+}
+
+.dropdown-personajes {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+
+.dropdown-personajes-content {
+    display: none;
+    position: relative;
+    width: 160px;
+    text-align: center;
+}
+
+.dropdown-personajes:hover .dropdown-personajes-content {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilo base para los elementos del mini menú */
+.contenedor-com-art_personajes {
+    padding-top: 10px ;
+    position: relative;
+    display: inline-block;
+}
+.dropdown-personajes-content {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    background-color: rgb(0, 0, 0);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-personajes-content a {
+    padding: 8px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-personajes-content a:hover {
+    background-color: #ddd;
+}
+
+.contenedor-com-art_personajes {
+    position: relative;
+    display: inline-block;
+}
+
+.clicked {
+    display: flex !important;
+}
+
+.img-art_personajes {
+    cursor: pointer;
+}
+
+/*================================================================================================*/
+
+/*estilo para el botón de mostrar más/menos */
+.toggle-description {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.toggle-description:hover {
+    background-color: #e0e0e0;
+}
+
+
+/* Añadir estilos para el botón de agregar personaje y la validación del formulario */
+#add-character-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    margin: 20px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+}
+
+#add-character-button:hover {
+    background-color: #45a049;
+}
+
+.highlight {
+    border: 2px solid red; /* Ajusta el color y estilo del borde según tus necesidades */
+    padding: 10px; /* Opcional: para que el borde no esté pegado al contenido */
+}
+
+/* styles.css */
+.button {
+    display: inline-block;
+    padding: 30px 60px;
+    margin-top: 40px;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    background-color: #007BFF;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    border: solid 5x black;
+}
+/* styles.css */
+.button-2 {
+    display: inline-block;
+    padding: 30px 60px;
+    margin-top: 40px;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    background-color: #3f0202;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    border: solid 5x black;
+}
+
+
+
+
+
+
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+/* Definir la clase para el fondo personalizado */
+.background-custom {
+    background-color: red;
+    background-image: url('/resours/img/fondos/fondo-pag.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: right bottom;
+    min-height: 100vh; /* Altura mínima de la pantalla completa */
+    min-width: 100vw;  /* Ancho mínimo de la pantalla completa */
 }

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/resours/styles/styles.css">
+    <title>Agregar Personaje - Smash WIKI</title>
+</head>
+<body>
+    <header class="contenedor-header">
+        <a id="icono" href="/index.html"><img src="/resours/img/icono/icono-index.png" alt="Icono"></a>
+        <a id="titulo" href="/index.html">
+            <h1>Smash WIKI</h1>
+        </a>
+        <img class="imag-titulo" src="/resours/img/icono/logo.png" alt="Logo">
+    </header>
+
+    <div class="contenedor-medio">
+        <main class="contenedor-formulario">
+            <form id="form-agregar-personaje" class="formulario-contacto">
+                <label for="nombre-personaje">Nombre del Personaje:</label>
+                <input type="text" id="nombre-personaje" name="nombre-personaje" required>
+                
+                <label for="descripcion-personaje">Descripción del Personaje:</label>
+                <textarea id="descripcion-personaje" name="descripcion-personaje" rows="4" required></textarea>
+                
+                <label for="imagen-personaje">URL de la Imagen del Personaje:</label>
+                <input type="url" id="imagen-personaje" name="imagen-personaje" required>
+                
+                <button type="submit">Agregar Personaje</button>
+            </form>
+        </main>
+
+        <aside class="contenedor-aside">
+            <h3 class="titulo-aside">Referencias</h3>
+            <div class="menu-aside">
+                <a class="recuadros-menu-aside" href="/index.html">Inicio</a>
+                <div class="dropdown">
+                    <a class="recuadros-menu-aside" href="/personajes/todos-los-personajes.html">Personajes</a>
+                    <div class="dropdown-content">
+                        <a class="recuadros-menu-des-aside" href="/personajes/Super-Smash-Bros.(1999).html">Super Smash Bros. (1999)</a>
+                        <a class="recuadros-menu-des-aside" href="/personajes/Super-Smash-Bros-Melee.(2001).html">Super Smash Bros. Melee (2001)</a>
+                    </div>
+                </div>
+                <a class="recuadros-menu-aside" href="/contacto.html">Contacto</a>
+            </div>
+        </aside>
+    </div>
+
+    <footer></footer>
+
+    <script src="/resours/JavaScript/crear_articulo.js"></script>
+</body>
+</html>

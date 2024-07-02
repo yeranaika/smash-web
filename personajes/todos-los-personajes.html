@@ -5,200 +5,350 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/resours/styles/styles.css">
     <title>Smash WIKI</title>
+    <style>
+        .img-art_personajes {
+            cursor: pointer;
+        }
+        .dropdown-personajes-content {
+            display: none;
+        }
+        .dropdown-personajes-content.clicked {
+            display: flex;
+        }
+        
+        .select-article-checkbox {
+            width: 20px;
+            height: 20px;
+            transform: scale(1.5); /* Agranda el checkbox */
+            margin-right: 10px; /* Espacio entre el checkbox y el texto */
+        }
+
+    </style>
+    
 </head>
-<!--titulo web-->
-<header class="contenedor-header">
-    <a id="icono" href="/index.html"><img src="/resours/img/icono/icono-index.png" >
-    </a>
-    
-    <a id="titulo" href="/index.html">
-        <h1>smash WIKI</h1>
-    </a>
+<body>
+    <!--titulo web-->
+    <header class="contenedor-header">
+        <a id="icono" href="/index.html"><img src="/resours/img/icono/icono-index.png" alt="Icono"></a>
+        <a id="titulo" href="/index.html">
+            <h1>Personajes Smash</h1>
+        </a>
+        <img class="imag-titulo" src="/resours/img/icono/logo.png" alt="Logo">
+    </header>
 
-    <img class="imag-titulo" src="/resours/img/icono/logo.png" >
-</header>
-
-<!-- contenedor -->
-<div class="contenedor-medio">
-    <main class="contenedor-main">
-        
-        <h3 class="titulos-articulo">"Super Smash Bros. ( 1999 )"</h3>
-        <!-- contenedor --> 
-
-                <!-- articulos -->
-        
-                <article class="articulos">
-                    <h3 class="titulos-articulo">"Mario"</h3>
-                    <div class="contenedor-com-art">
-                        <p class="contenido-articulo">Creado por Shigeru Miyamoto en 1981, Mario hizo su primera aparición en el juego arcade Donkey Kong, donde debía rescatar a la princesa Pauline de las garras del gorila gigante. Desde entonces, ha protagonizado una gran cantidad de juegos de plataformas, aventuras y deportes, incluyendo "Super Mario Bros.", "Super Mario World", "Super Mario 64" y "Super Mario Odyssey".</p>
-                        
-                        <img class="img-art" src="/resours/img/personajes/SuperSmash1999/mario(1999).png" >
+    <!-- contenedor -->
+    <div class="contenedor-medio-TODO-PER">
+        <main class="contenedor-main_personajes" id="contenedor-personajes">
+            <!-- Personajes preexistentes -->
+            <div class="contenedor-com-art_personajes">
+                <img class="img-art_personajes" src="/resours/img/personajes/LuchadoreEnmarcados/mario_marco.jpg" alt="Mario" data-character-info="Es un fontanero italiano que protagoniza la serie de juegos 'Super Mario'.">
+                <p class="contenido-articulo_personajes">Mario</p>
+                <div class="dropdown-personajes">
+                    <div class="dropdown-personajes-content contenido-articulo_personajes">
+                        <a class="mas-texto">Es un fontanero italiano que protagoniza la serie de juegos "Super Mario".</a>
+                        <a class="highlighted-link" href="/personajes/Super-Smash-Bros.(1999).html#mario">Mario (Nintendo 64)</a>
+                        <a href="/personajes/Super-Smash-Bros-Melee.(2001).html#mario">Mario (Melee)</a>
                     </div>
-                </article>
-
-                <!-- articulos -->
-        
-                <article class="articulos">
-                    <h3 class="titulos-articulo">"Link"</h3>
-                    <div class="contenedor-com-art">
-                        <p class="contenido-articulo">La historia de Link varía en cada juego, pero generalmente es un joven que vive en Hyrule y que, en algún momento, se ve envuelto en una profecía que lo convierte en el Héroe del Tiempo. Debe embarcarse en una aventura para recolectar objetos mágicos, resolver puzzles y derrotar a enemigos poderosos, culminando en un enfrentamiento final contra Ganondorf.</p>
-
-                        <img class="img-art" src="/resours/img/personajes/SuperSmash1999/link(1999).png" >
-                    </div>
-                </article>
-
-                <!-- articulos -->
-        
-                <article class="articulos">
-                    <h3 class="titulos-articulo">"Samus"</h3>
-        
-                    <div class="contenedor-com-art">
-
-                        <p class="contenido-articulo">Samus Aran es la protagonista de la serie de videojuegos "Metroid" de Nintendo. Es una cazarrecompensas intergaláctica conocida por su traje Phazon y su cañón de brazo, con los que combate alienígenas y robots para proteger la galaxia de los Metroids, criaturas parasitarias que absorben energía vital.</p>
-                        
-                        <img class="img-art" src="/resours/img/personajes/SuperSmash1999/samus(1999).png" >
-                    </div>
-                </article>
-
-                <!-- articulos -->
-        
-                <article class="articulos">
-                    <h3 class="titulos-articulo">"Yoshi"</h3>
-        
-                    <div class="contenedor-com-art">
-
-                        <p class="contenido-articulo">Yoshi es un dinosaurio verde de tamaño mediano, conocido por su personalidad amigable, su lengua larga y prensil, y su distintivo caparazón rojo con manchas blancas. Es un personaje emblemático de la serie de videojuegos "Super Mario" de Nintendo, donde aparece como compañero y aliado de Mario en sus aventuras.</p>
-        
-                        <img class="img-art" src="/resours/img/personajes/SuperSmash1999/yoshi(1999).png" >
-                    </div>
-                </article>
-
-                <!-- articulos -->
-        
-                <article class="articulos">
-                    <h3 class="titulos-articulo">"Kirby"</h3>
-        
-                    <div class="contenedor-com-art">
-
-                        <p class="contenido-articulo">Kirby hizo su primera aparición en el juego "Kirby's Dream Land" para Game Boy en 1992. Desde entonces, se ha convertido en uno de los personajes más populares de Nintendo, protagonizando más de 30 juegos en diversas plataformas.</p>
-        
-                        <img class="img-art" src="/resours/img/personajes/SuperSmash1999/kirby(1999).png" >
-                    </div>
-                </article>
-
-                <!-- articulos -->
-        
-                <article class="articulos">
-                    <h3 class="titulos-articulo">"Fox"</h3>
-        
-                    <div class="contenedor-com-art">
-
-                        <p class="contenido-articulo">Fox McCloud es un zorro antropomórfico y el protagonista de la serie de videojuegos "Star Fox" de Nintendo. Es un piloto espacial habilidoso y líder del equipo Star Fox, un grupo de mercenarios que defienden la galaxia del malvado Andross.</p>
-        
-                        <img class="img-art" src="/resours/img/personajes/SuperSmash1999/fox(1999).png" >
-                    </div>
-                </article>
-
-                <!-- articulos -->
-        
-                <article class="articulos">
-                    <h3 class="titulos-articulo">"Pikachu"</h3>
-
-                    <div class="contenedor-com-art">
-
-                        <p class="contenido-articulo">Pikachu es un Pokémon de tipo eléctrico, conocido por su pelaje amarillo, sus mejillas rojas y su cola en forma de rayo. Es uno de los Pokémon más populares y reconocidos de la franquicia, siendo la mascota oficial de la serie.</p>
-        
-                        <img class="img-art" src="/resours/img/personajes/SuperSmash1999/pikachu(1999).png" >
-                    </div>
-                </article>
-
-                <!-- articulos -->
-        
-                <article class="articulos">
-                    <h3 class="titulos-articulo">"Luigi"</h3>
-
-                    <div class="contenedor-com-art">
-
-                        <p class="contenido-articulo">Luigi debutó en el juego arcade "Mario Bros." de 1983 como el segundo jugador, mientras que Mario era el jugador principal. Desde entonces, ha aparecido en numerosos juegos de la serie "Super Mario", generalmente como compañero de Mario o como personaje jugable alternativo. En 2001, Luigi protagonizó su propio juego principal, "Luigi's Mansion" para GameCube, y desde entonces ha tenido dos secuelas más.</p>
-        
-                        <img class="img-art" src="/resours/img/personajes/SuperSmash1999/luigi(1999).png" >
-                    </div>
-                </article>
-
-                <!-- articulos -->
-        
-                <article class="articulos">
-                    <h3 class="titulos-articulo">"Ness"</h3>
-
-                    <div class="contenedor-com-art">
-
-                        <p class="contenido-articulo">Ness es el protagonista principal del videojuego "EarthBound" (Mother 2 en Japón) de 1994 para la consola Super Nintendo Entertainment System (SNES). Es un joven psíquico que viaja en el tiempo para detener una invasión alienígena.</p>
-                        
-                        <img class="img-art" src="/resours/img/personajes/SuperSmash1999/ness(1999).png" >
-                    </div>
-                </article>
-
-                <!-- articulos -->
-        
-                <article class="articulos">
-                    <h3 class="titulos-articulo">"Captain Falcon"</h3>
-        
-                    <div class="contenedor-com-art">
-
-                        <p class="contenido-articulo">El Capitán Falcon debutó en 1990 en el juego "F-Zero" para Super Nintendo Entertainment System (SNES). Desde entonces, se ha convertido en el personaje principal de la serie, apareciendo en "F-Zero X", "F-Zero GX" y "F-Zero AX".</p>
-                        
-                        <img class="img-art" src="/resours/img/personajes/SuperSmash1999/capitan-falcon(1999).png" >
-                    </div>
-                </article>
-
-                <!-- articulos -->
-        
-                <article class="articulos">
-                    <h3 class="titulos-articulo">"Jigglypuff"</h3>
-                    <div class="contenedor-com-art">
-        
-                        <p class="contenido-articulo">Jigglypuff es un Pokémon de tipo normal y hada introducido en la primera generación. Es conocido por su apariencia adorable, su voz melodiosa y su tendencia a cantar a los demás para dormirlos.</p>
-                        
-                        <img class="img-art" src="/resours/img/personajes/SuperSmash1999/jigglypuff(1999).png" >
-                    </div>
-                </article>
-            </main>
-
-
-    
-    </main>
-
-
-    <aside class="contenedor-aside">
-        <h3 class="titulo-aside">Referencias</h3>
-        <div class="menu-aside">
-            <a class="recuadros-menu-aside" href="/index.html">Inicio</a>
-            <div class="dropdown">
-                <a class="recuadros-menu-aside" href="/personajes/todos-los-personajes.html">Personajes</a>
-                <div class="dropdown-content">
-                    <a class="recuadros-menu-des-aside" href="/personajes/Super-Smash-Bros.(1999).html">Super Smash Bros. ( 1999)</a>
-                    <a class="recuadros-menu-des-aside" href="/personajes/Super-Smash-Bros-Melee.(2001).html">Super Smash Bros. Melee (2001)</a>
                 </div>
             </div>
-            <a class="recuadros-menu-aside" href="/contacto.html">Contacto</a>
-        </div>
-    </aside>
+            <!-- Estructura repetida para cada personaje -->
 
-</div>
+            <div class="contenedor-com-art_personajes">
+                <img class="img-art_personajes" src="/resours/img/personajes/LuchadoreEnmarcados/Dr.Mario_marco.jpg" alt="Dr. Mario" data-character-info="Mario asume el papel de un médico que combate virus usando cápsulas de colores en un juego de puzles similar a Tetris.">
+                <p class="contenido-articulo_personajes">Dr. Mario</p>
+                <div class="dropdown-personajes">
+                    <div class="dropdown-personajes-content contenido-articulo_personajes">
+                        <a class="mas-texto">Mario asume el papel de un médico que combate virus usando cápsulas de colores en un juego de puzles similar a Tetris.</a>
+                        <a href="/personajes/Super-Smash-Bros-Melee.(2001).html#dr-mario">Dr. Mario (GameCube)</a>
+                    </div>
+                </div>
+            </div>
 
-    <!--barra de navegacion inferior-->
-    <nav class="menu-inferior">
-        <a class="recuadros-menu-inferior" href="/index.html">inicio</a>
-        <a class="recuadros-menu-inferior" href="/personajes/todos-los-personajes-part2.html">→</a>
-    </nav>
-<!--barra de navegacion inferior-->
-<nav>
-    <h3></h3>
-</nav>
+            <div class="contenedor-com-art_personajes">
+                <img class="img-art_personajes" src="/resours/img/personajes/LuchadoreEnmarcados/Luigi_marco.jpg" alt="Luigi" data-character-info="Luigi es el hermano menor de Mario y uno de los personajes más emblemáticos de Nintendo.">
+                <p class="contenido-articulo_personajes">Luigi</p>
+                <div class="dropdown-personajes">
+                    <div class="dropdown-personajes-content contenido-articulo_personajes">
+                        <a class="mas-texto">Luigi es el hermano menor de Mario y uno de los personajes más emblemáticos de Nintendo.</a>
+                        <a href="/personajes/Super-Smash-Bros.(1999).html#luigi">Luigi (Nintendo 64)</a>
+                        <a href="/personajes/Super-Smash-Bros-Melee.(2001).html#luigi">Luigi (GameCube)</a>
+                    </div>
+                </div>
+            </div>
 
-<footer></footer>
+            <div class="contenedor-com-art_personajes">
+                <img class="img-art_personajes" src="/resours/img/personajes/LuchadoreEnmarcados/Bowser_marco.jpg" alt="Bowser" data-character-info="Es el líder de los Koopa y el archienemigo de Mario.">
+                <p class="contenido-articulo_personajes">Bowser</p>
+                <div class="dropdown-personajes">
+                    <div class="dropdown-personajes-content contenido-articulo_personajes">
+                        <a class="mas-texto">Es el líder de los Koopa y el archienemigo de Mario.</a>
+                        <a href="/personajes/Super-Smash-Bros-Melee.(2001).html#bowser">Bowser (GameCube)</a>
+                    </div>
+                </div>
+            </div>
 
-<body>
-    
+            <div class="contenedor-com-art_personajes">
+                <img class="img-art_personajes" src="/resours/img/personajes/LuchadoreEnmarcados/Peach_marco.jpg" alt="Peach" data-character-info="La Princesa Peach es la gobernante del Reino Champiñón.">
+                <p class="contenido-articulo_personajes">Peach</p>
+                <div class="dropdown-personajes">
+                    <div class="dropdown-personajes-content contenido-articulo_personajes">
+                        <a class="mas-texto">La Princesa Peach es la gobernante del Reino Champiñón.</a>
+                        <a href="/personajes/Super-Smash-Bros-Melee.(2001).html#peach">Peach (GameCube)</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contenedor-com-art_personajes">
+                <img class="img-art_personajes" src="/resours/img/personajes/LuchadoreEnmarcados/Yoshi_marco.jpg" alt="Yoshi" data-character-info="Yoshi es un dinosaurio verde y uno de los personajes más queridos de la serie de videojuegos de Mario.">
+                <p class="contenido-articulo_personajes">Yoshi</p>
+                <div class="dropdown-personajes">
+                    <div class="dropdown-personajes-content contenido-articulo_personajes">
+                        <a class="mas-texto">Yoshi es un dinosaurio verde y uno de los personajes más queridos de la serie de videojuegos de Mario.</a>
+                        <a href="/personajes/Super-Smash-Bros.(1999).html#yoshi">Yoshi (Nintendo 64)</a>
+                        <a href="/personajes/Super-Smash-Bros-Melee.(2001).html#yoshi">Yoshi (GameCube)</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contenedor-com-art_personajes">
+                <img class="img-art_personajes" src="/resours/img/personajes/LuchadoreEnmarcados/DK_Marcox.jpg" alt="Donkey Kong" data-character-info="Es un gorila fuerte y poderoso, conocido por ser el protagonista de su propia serie de juegos, como 'Donkey Kong Country'.">
+                <p class="contenido-articulo_personajes">Donkey Kong</p>
+                <div class="dropdown-personajes">
+                    <div class="dropdown-personajes-content contenido-articulo_personajes">
+                        <a class="mas-texto">Es un gorila fuerte y poderoso, conocido por ser el protagonista de su propia serie de juegos, como "Donkey Kong Country".</a>
+                        <a href="/personajes/Super-Smash-Bros-Melee.(2001).html#donkey-kong">Donkey Kong (GameCube)</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contenedor-com-art_personajes">
+                <img class="img-art_personajes" src="/resours/img/personajes/LuchadoreEnmarcados/Captain_Falcon_marco.jpg" alt="Capitan Falcon" data-character-info="Es conocido por ser un hábil piloto de la nave Blue Falcon y por su carismática personalidad.">
+                <p class="contenido-articulo_personajes">Capitan Falcon</p>
+                <div class="dropdown-personajes">
+                    <div class="dropdown-personajes-content contenido-articulo_personajes">
+                        <a class="mas-texto">Es conocido por ser un hábil piloto de la nave Blue Falcon y por su carismática personalidad.</a>
+                        <a href="/personajes/Super-Smash-Bros.(1999).html#captain-falcon">Captain Falcon (Nintendo 64)</a>
+                        <a href="/personajes/Super-Smash-Bros-Melee.(2001).html#captain-falcon">Captain Falcon (GameCube)</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contenedor-com-art_personajes">
+                <img class="img-art_personajes" src="/resours/img/personajes/LuchadoreEnmarcados/Ganondorf_marco.jpg" alt="Ganondorf" data-character-info="El rey de los Gerudo y la encarnación del mal conocido como Ganon.">
+                <p class="contenido-articulo_personajes">Ganondorf</p>
+                <div class="dropdown-personajes">
+                    <div class="dropdown-personajes-content contenido-articulo_personajes">
+                        <a class="mas-texto">El rey de los Gerudo y la encarnación del mal conocido como Ganon.</a>
+                        <a href="/personajes/Super-Smash-Bros-Melee.(2001).html#ganondorf">Ganondorf (GameCube)</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contenedor-com-art_personajes">
+                <img class="img-art_personajes" src="/resours/img/personajes/LuchadoreEnmarcados/Falco_marco.jpg" alt="Falco" data-character-info="Es un piloto experto y el mejor amigo de Fox McCloud.">
+                <p class="contenido-articulo_personajes">Falco</p>
+                <div class="dropdown-personajes">
+                    <div class="dropdown-personajes-content contenido-articulo_personajes">
+                        <a class="mas-texto">Es un piloto experto y el mejor amigo de Fox McCloud.</a>
+                        <a href="/personajes/Super-Smash-Bros-Melee.(2001).html#falco">Falco (GameCube)</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contenedor-com-art_personajes">
+                <img class="img-art_personajes" src="/resours/img/personajes/LuchadoreEnmarcados/Fox_marco.jpg" alt="Fox" data-character-info="Es el líder del equipo Star Fox, una unidad de mercenarios que pilotean naves espaciales para proteger el sistema Lylat de amenazas como Andross y otros enemigos.">
+                <p class="contenido-articulo_personajes">Fox</p>
+                <div class="dropdown-personajes">
+                    <div class="dropdown-personajes-content contenido-articulo_personajes">
+                        <a class="mas-texto">Es el líder del equipo Star Fox, una unidad de mercenarios que pilotean naves espaciales para proteger el sistema Lylat de amenazas como Andross y otros enemigos.</a>
+                        <a href="/personajes/Super-Smash-Bros.(1999).html#fox">Fox (Nintendo 64)</a>
+                        <a href="/personajes/Super-Smash-Bros-Melee.(2001).html#fox">Fox (GameCube)</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contenedor-com-art_personajes">
+                <img class="img-art_personajes" src="/resours/img/personajes/LuchadoreEnmarcados/Ness_marco.jpg" alt="Ness" data-character-info="Es un niño con poderes psíquicos que vive en la ciudad de Onett.">
+                <p class="contenido-articulo_personajes">Ness</p>
+                <div class="dropdown-personajes">
+                    <div class="dropdown-personajes-content contenido-articulo_personajes">
+                        <a class="mas-texto">Es un niño con poderes psíquicos que vive en la ciudad de Onett.</a>
+                        <a href="/personajes/Super-Smash-Bros.(1999).html#ness">Ness (Nintendo 64)</a>
+                        <a href="/personajes/Super-Smash-Bros-Melee.(2001).html#ness">Ness (GameCube)</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contenedor-com-art_personajes">
+                <img class="img-art_personajes" src="/resours/img/personajes/LuchadoreEnmarcados/Ice_Climbers_marco.jpg" alt="Ice Climbers" data-character-info="Consisten en Popo, el chico con pantalones azules, y Nana, la chica con pantalones rosas, quienes escalan montañas y evitan obstáculos.">
+                <p class="contenido-articulo_personajes">Ice Climbers</p>
+                <div class="dropdown-personajes">
+                    <div class="dropdown-personajes-content contenido-articulo_personajes">
+                        <a class="mas-texto">Consisten en Popo, el chico con pantalones azules, y Nana, la chica con pantalones rosas, quienes escalan montañas y evitan obstáculos.</a>
+                        <a href="/personajes/Super-Smash-Bros-Melee.(2001).html#ice-climbers">Ice Climbers (GameCube)</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contenedor-com-art_personajes">
+                <img class="img-art_personajes" src="/resours/img/personajes/LuchadoreEnmarcados/Kirby_marco.jpg" alt="Kirby" data-character-info="Kirby es una adorable bola rosa y el protagonista de la serie de videojuegos del mismo nombre de Nintendo.">
+                <p class="contenido-articulo_personajes">Kirby</p>
+                <div class="dropdown-personajes">
+                    <div class="dropdown-personajes-content contenido-articulo_personajes">
+                        <a class="mas-texto">Kirby es una adorable bola rosa y el protagonista de la serie de videojuegos del mismo nombre de Nintendo.</a>
+                        <a href="/personajes/Super-Smash-Bros.(1999).html#kirby">Kirby (Nintendo 64)</a>
+                        <a href="/personajes/Super-Smash-Bros-Melee.(2001).html#kirby">Kirby (GameCube)</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contenedor-com-art_personajes">
+                <img class="img-art_personajes" src="/resours/img/personajes/LuchadoreEnmarcados/Samus_marco.jpg" alt="Samus" data-character-info="Es una cazarrecompensas galáctica conocida por su traje de poder pesado y por su habilidad en el combate y la exploración espacial.">
+                <p class="contenido-articulo_personajes">Samus</p>
+                <div class="dropdown-personajes">
+                    <div class="dropdown-personajes-content contenido-articulo_personajes">
+                        <a class="mas-texto">Es una cazarrecompensas galáctica conocida por su traje de poder pesado y por su habilidad en el combate y la exploración espacial.</a>
+                        <a href="/personajes/Super-Smash-Bros.(1999).html#samus">Samus (Nintendo 64)</a>
+                        <a href="/personajes/Super-Smash-Bros-Melee.(2001).html#samus">Samus (GameCube)</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contenedor-com-art_personajes">
+                <img class="img-art_personajes" src="/resours/img/personajes/LuchadoreEnmarcados/Zelda_marco.jpg" alt="Zelda" data-character-info="Zelda es la princesa de Hyrule y es conocida por su sabiduría y poderes mágicos, especialmente en el uso de la Trifuerza.">
+                <p class="contenido-articulo_personajes">Zelda</p>
+                <div class="dropdown-personajes">
+                    <div class="dropdown-personajes-content contenido-articulo_personajes">
+                        <a class="mas-texto">Zelda es la princesa de Hyrule y es conocida por su sabiduría y poderes mágicos, especialmente en el uso de la Trifuerza.</a>
+                        <a href="/personajes/Super-Smash-Bros-Melee.(2001).html#zelda">Zelda (GameCube)</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contenedor-com-art_personajes">
+                <img class="img-art_personajes" src="/resours/img/personajes/LuchadoreEnmarcados/Young_Link_marco.jpg" alt="Young Link" data-character-info="Young Link es una versión más joven de Link, el héroe principal de la serie de videojuegos 'The Legend of Zelda' de Nintendo.">
+                <p class="contenido-articulo_personajes">Young Link</p>
+                <div class="dropdown-personajes">
+                    <div class="dropdown-personajes-content contenido-articulo_personajes">
+                        <a class="mas-texto">Young Link es una versión más joven de Link, el héroe principal de la serie de videojuegos "The Legend of Zelda" de Nintendo.</a>
+                        <a href="/personajes/Super-Smash-Bros-Melee.(2001).html#young-link">Young Link (GameCube)</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contenedor-com-art_personajes">
+                <img class="img-art_personajes" src="/resours/img/personajes/LuchadoreEnmarcados/Pichu_marco.jpg" alt="Pichu" data-character-info="Es la forma pre-evolutiva de Pikachu y debutó en los juegos Pokémon Gold y Silver.">
+                <p class="contenido-articulo_personajes">Pichu</p>
+                <div class="dropdown-personajes">
+                    <div class="dropdown-personajes-content contenido-articulo_personajes">
+                        <a class="mas-texto">Es la forma pre-evolutiva de Pikachu y debutó en los juegos Pokémon Gold y Silver.</a>
+                        <a href="/personajes/Super-Smash-Bros-Melee.(2001).html#pichu">Pichu (GameCube)</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contenedor-com-art_personajes">
+                <img class="img-art_personajes" src="/resours/img/personajes/LuchadoreEnmarcados/Pikachu_marco.jpg" alt="Pikachu" data-character-info="Es conocido por ser una criatura eléctrica, amarilla y ágil, con la capacidad de lanzar ataques eléctricos como Thunderbolt y Thunder.">
+                <p class="contenido-articulo_personajes">Pikachu</p>
+                <div class="dropdown-personajes">
+                    <div class="dropdown-personajes-content contenido-articulo_personajes">
+                        <a class="mas-texto">Es conocido por ser una criatura eléctrica, amarilla y ágil, con la capacidad de lanzar ataques eléctricos como Thunderbolt y Thunder.</a>
+                        <a href="/personajes/Super-Smash-Bros.(1999).html#pikachu">Pikachu (Nintendo 64)</a>
+                        <a href="/personajes/Super-Smash-Bros-Melee.(2001).html#pikachu">Pikachu (GameCube)</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contenedor-com-art_personajes">
+                <img class="img-art_personajes" src="/resours/img/personajes/LuchadoreEnmarcados/Jigglypuff_marco.jpg" alt="Jigglypuff" data-character-info="Jigglypuff es un Pokémon de tipo Normal/Hada conocido por su apariencia redonda y su habilidad para cantar una canción de cuna que hace que los que la escuchen se duerman.">
+                <p class="contenido-articulo_personajes">Jigglypuff</p>
+                <div class="dropdown-personajes">
+                    <div class="dropdown-personajes-content contenido-articulo_personajes">
+                        <a class="mas-texto">Jigglypuff es un Pokémon de tipo Normal/Hada conocido por su apariencia redonda y su habilidad para cantar una canción de cuna que hace que los que la escuchen se duerman.</a>
+                        <a href="/personajes/Super-Smash-Bros.(1999).html#jigglypuff">Jigglypuff (Nintendo 64)</a>
+                        <a href="/personajes/Super-Smash-Bros-Melee.(2001).html#jigglypuff">Jigglypuff (GameCube)</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contenedor-com-art_personajes">
+                <img class="img-art_personajes" src="/resours/img/personajes/LuchadoreEnmarcados/Mewtwo_marco.jpg" alt="Mewtwo" data-character-info="Es conocido por ser creado artificialmente a partir del ADN de Mew, otro Pokémon legendario.">
+                <p class="contenido-articulo_personajes">Mewtwo</p>
+                <div class="dropdown-personajes">
+                    <div class="dropdown-personajes-content contenido-articulo_personajes">
+                        <a class="mas-texto">Es conocido por ser creado artificialmente a partir del ADN de Mew, otro Pokémon legendario.</a>
+                        <a href="/personajes/Super-Smash-Bros-Melee.(2001).html#mewtwo">Mewtwo (GameCube)</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contenedor-com-art_personajes">
+                <img class="img-art_personajes" src="/resours/img/personajes/LuchadoreEnmarcados/Mr._Game_and_Watch_marco.jpg" alt="Mr. Game & Watch" data-character-info="Mr. Game & Watch es un personaje de Nintendo que representa a una serie de juegos portátiles clásicos de la década de 1980, conocidos como 'Game & Watch'.">
+                <p class="contenido-articulo_personajes">Mr. Game & Watch</p>
+                <div class="dropdown-personajes">
+                    <div class="dropdown-personajes-content contenido-articulo_personajes">
+                        <a class="mas-texto">Mr. Game & Watch es un personaje de Nintendo que representa a una serie de juegos portátiles clásicos de la década de 1980, conocidos como "Game & Watch".</a>
+                        <a href="/personajes/Super-Smash-Bros-Melee.(2001).html#mr-game-and-watch">Mr. Game & Watch (GameCube)</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contenedor-com-art_personajes">
+                <img class="img-art_personajes" src="/resours/img/personajes/LuchadoreEnmarcados/Marth_marco.jpg" alt="Marth" data-character-info="Marth es conocido por ser un espadachín habilidoso y por su determinación en la batalla.">
+                <p class="contenido-articulo_personajes">Marth</p>
+                <div class="dropdown-personajes">
+                    <div class="dropdown-personajes-content contenido-articulo_personajes">
+                        <a class="mas-texto">Marth es conocido por ser un espadachín habilidoso y por su determinación en la batalla.</a>
+                        <a href="/personajes/Super-Smash-Bros-Melee.(2001).html#marth">Marth (GameCube)</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contenedor-com-art_personajes">
+                <img class="img-art_personajes" src="/resours/img/personajes/LuchadoreEnmarcados/Roy_marco.jpg" alt="Roy" data-character-info="Roy es conocido por su valentía y su habilidad con la espada.">
+                <p class="contenido-articulo_personajes">Roy</p>
+                <div class="dropdown-personajes">
+                    <div class="dropdown-personajes-content contenido-articulo_personajes">
+                        <a class="mas-texto">Roy es conocido por su valentía y su habilidad con la espada.</a>
+                        <a href="/personajes/Super-Smash-Bros-Melee.(2001).html#roy">Roy (GameCube)</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contenedor-com-art_personajes">
+                <img class="img-art_personajes" src="/resours/img/personajes/LuchadoreEnmarcados/Link_marco.jpg" alt="Link" data-character-info="Link es el héroe y es conocido por su valentía, habilidad con la espada y su capacidad para usar diversos objetos y habilidades mágicas para enfrentar enemigos y resolver acertijos.">
+                <p class="contenido-articulo_personajes">Link</p>
+                <div class="dropdown-personajes">
+                    <div class="dropdown-personajes-content contenido-articulo_personajes">
+                        <a class="mas-texto">Link es el héroe y es conocido por su valentía, habilidad con la espada y su capacidad para usar diversos objetos y habilidades mágicas para enfrentar enemigos y resolver acertijos.</a>
+                        <a href="/personajes/Super-Smash-Bros.(1999).html#link">Link (Nintendo 64)</a>
+                        <a href="/personajes/Super-Smash-Bros-Melee.(2001).html#link">Link (GameCube)</a>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <aside class="contenedor-aside">
+            <h3 class="titulo-aside">Referencias</h3>
+            <div class="menu-aside">
+                <a class="recuadros-menu-aside" href="/index.html">Inicio</a>
+                <div class="dropdown">
+                    <a class="recuadros-menu-aside" href="/personajes/todos-los-personajes.html">Personajes</a>
+                    <div class="dropdown-content">
+                        <a class="recuadros-menu-des-aside" href="/personajes/Super-Smash-Bros.(1999).html">Super Smash Bros. (1999)</a>
+                        <a class="recuadros-menu-des-aside" href="/personajes/Super-Smash-Bros-Melee.(2001).html">Super Smash Bros. Melee (2001)</a>
+                    </div>
+                </div>
+                <a class="recuadros-menu-aside" href="/contacto.html">Contacto</a>
+            </div>
+        </aside>
+    </div>
+
+    <a id="add-character-link" href="/personajes/crear _articulo.html" class="button">Agregar Nuevo Personaje</a>
+    <button id="delete-selected-articles" class="button-2">Eliminar Artículos Seleccionados</button>
+    <footer></footer>
+
+    <script src="/resours/JavaScript/Script.js"></script>
+    <script src="/resours/JavaScript/crear_articulo.js"></script>
 </body>
 </html>
