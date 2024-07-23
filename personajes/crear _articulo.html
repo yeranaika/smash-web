@@ -4,7 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/resours/styles/styles.css">
+    <script src="/resours/JQuery/jquery_3.7.1.js"></script>
     <title>Agregar Personaje - Smash WIKI</title>
+    <style>
+        .drop-zone {
+            height: 200px; /* Altura suficiente para ver la imagen */
+            border: 2px dashed #ccc;
+            padding: 20px;
+            text-align: center;
+            cursor: pointer;
+            margin-top: 10px;
+            margin-bottom: 15px;
+            position: relative;
+            overflow: hidden; /* Para que el contenido no se desborde */
+        }
+        .drop-zone img {
+            max-width: 100%;
+            max-height: 100%;
+            display: none;
+            object-fit: contain; /* Ajusta la imagen para que siempre quepa dentro del contenedor */
+        }
+        .drop-message {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #ccc;
+        }
+        #form-agregar-personaje {
+            max-width: 600px; /* Ancho máximo para el formulario */
+            margin: 0 auto; /* Centramos el formulario */
+            padding: 20px; /* Añadimos padding para dar espacio interno */
+            box-sizing: border-box; /* Incluye el padding en el tamaño total del elemento */
+        }
+        #form-agregar-personaje input[type="text"],
+        #form-agregar-personaje input[type="url"],
+        #form-agregar-personaje textarea {
+            width: 100%; /* Ancho del 100% del contenedor */
+            box-sizing: border-box; /* Incluye el padding y borde en el tamaño total */
+            margin-bottom: 10px; /* Espaciado inferior para separar los campos */
+        }
+        #descripcion-personaje {
+            max-width: 100%; /* Asegura que el textarea no exceda el contenedor */
+            height: 150px; /* Ajuste de altura del textarea */
+        }
+    </style>
 </head>
 <body>
     <header class="contenedor-header">
@@ -25,8 +69,13 @@
                 <textarea id="descripcion-personaje" name="descripcion-personaje" rows="4" required></textarea>
                 
                 <label for="imagen-personaje">URL de la Imagen del Personaje:</label>
-                <input type="url" id="imagen-personaje" name="imagen-personaje" required>
+                <input type="url" id="imagen-personaje" name="imagen-personaje">
                 
+                <div class="drop-zone" id="drop-zone">
+                    <span class="drop-message">Arrastra y suelta la imagen aquí o haz clic para seleccionar</span>
+                    <img id="preview" src="#" alt="Vista previa">
+                </div>
+
                 <button type="submit">Agregar Personaje</button>
             </form>
         </main>
@@ -49,6 +98,106 @@
 
     <footer></footer>
 
-    <script src="/resours/JavaScript/crear_articulo.js"></script>
+    <script>
+        $(document).ready(function() {
+            var dropZone = $('#drop-zone');
+            var preview = $('#preview');
+            var dropMessage = $('.drop-message');
+            var fileInput = $('<input type="file" accept="image/*" style="display: none;">');
+            var imageURLInput = $('#imagen-personaje');
+            var imageBase64 = '';
+
+            dropZone.append(fileInput);
+            
+            dropZone.on('click', function() {
+                fileInput.click();
+            });
+            
+            fileInput.on('change', function(event) {
+                handleFiles(event.target.files);
+            });
+            
+            dropZone.on('dragover', function(event) {
+                event.preventDefault();
+                event.stopPropagation();
+                dropZone.addClass('dragover');
+            });
+            
+            dropZone.on('dragleave', function(event) {
+                event.preventDefault();
+                event.stopPropagation();
+                dropZone.removeClass('dragover');
+            });
+            
+            dropZone.on('drop', function(event) {
+                event.preventDefault();
+                event.stopPropagation();
+                dropZone.removeClass('dragover');
+                var files = event.originalEvent.dataTransfer.files;
+                handleFiles(files);
+            });
+
+            imageURLInput.on('input', function() {
+                if (imageURLInput.val()) {
+                    dropZone.hide();
+                    preview.hide();
+                    imageBase64 = '';
+                } else {
+                    dropZone.show();
+                    if (preview.attr('src') !== '#') {
+                        preview.show();
+                    }
+                }
+            });
+            
+            function handleFiles(files) {
+                if (files.length) {
+                    var file = files[0];
+                    var reader = new FileReader();
+                    
+                    reader.onload = function(event) {
+                        preview.attr('src', event.target.result);
+                        preview.show();
+                        dropMessage.hide(); // Oculta el mensaje cuando se muestra la imagen
+                        imageURLInput.val(''); // Limpia el campo de URL
+                        imageBase64 = event.target.result; // Guarda la imagen en base64
+                    };
+                    
+                    reader.readAsDataURL(file);
+                }
+            }
+
+            $('#form-agregar-personaje').on('submit', function(event) {
+                event.preventDefault();
+                
+                var nombrePersonaje = $('#nombre-personaje').val().trim();
+                var descripcionPersonaje = $('#descripcion-personaje').val().trim();
+                var imagenPersonaje = imageBase64 || imageURLInput.val().trim();
+
+                if (!imagenPersonaje) {
+                    alert('Por favor, proporciona una imagen para el personaje.');
+                    return;
+                }
+
+                var personajes = JSON.parse(localStorage.getItem('personajes')) || [];
+                personajes.push({
+                    nombre: nombrePersonaje,
+                    descripcion: descripcionPersonaje,
+                    imagen: imagenPersonaje
+                });
+                localStorage.setItem('personajes', JSON.stringify(personajes));
+
+                alert('Personaje agregado con éxito.');
+                $('#form-agregar-personaje')[0].reset();
+                preview.hide();
+                dropMessage.show();
+                dropZone.show();
+                imageBase64 = '';
+
+                window.location.href = "/personajes/todos-los-personajes.html";
+            });
+        });
+    </script>
+
 </body>
 </html>

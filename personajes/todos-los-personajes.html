@@ -23,6 +23,7 @@
             margin-right: 10px; /* Espacio entre el checkbox y el texto */
         }
 
+
     </style>
     
 </head>
@@ -348,7 +349,35 @@
     <button id="delete-selected-articles" class="button-2">Eliminar Artículos Seleccionados</button>
     <footer></footer>
 
-    <script src="/resours/JavaScript/Script.js"></script>
-    <script src="/resours/JavaScript/crear_articulo.js"></script>
 </body>
+
+<script src="/resours/JavaScript/Script.js"></script>
+
+<script>
+    $(document).ready(function() {
+        var personajes = JSON.parse(localStorage.getItem('personajes')) || [];
+
+        personajes.forEach(function(personaje) {
+            var personajeHTML = `
+                <div class="contenedor-com-art_personajes">
+                    <img class="img-art_personajes" src="${personaje.imagen}" alt="${personaje.nombre}" data-character-info="${personaje.descripcion}">
+                    <p class="contenido-articulo_personajes">${personaje.nombre}</p>
+                    <div class="dropdown-personajes">
+                        <div class="dropdown-personajes-content contenido-articulo_personajes">
+                            <a class="mas-texto">${personaje.descripcion}</a>
+                        </div>
+                    </div>
+                    <input type="checkbox" class="select-article-checkbox">
+                </div>
+            `;
+            $('#contenedor-personajes').append(personajeHTML);
+        });
+
+        // Función para mostrar más información del personaje al hacer clic en la imagen
+        $('.img-art_personajes').on('click', function() {
+            $(this).next('.dropdown-personajes').find('.dropdown-personajes-content').toggleClass('clicked');
+        });
+    });
+</script>
+
 </html>

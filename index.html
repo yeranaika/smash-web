@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/resours/styles/styles.css">
+    <script src="/resours/JQuery/jquery_3.7.1.js"></script> <!-- Referencia local a jQuery -->
     <title>Smash WIKI</title>
 </head>
 <body>
@@ -72,7 +73,7 @@
             </div>
         </article>
     </main>
-
+    
     <aside class="contenedor-aside">
         <h3 class="titulo-aside">Referencias</h3>
         <div class="menu-aside">
@@ -89,14 +90,41 @@
     </aside>
 </div>
 
-<!--barra de navegacion inferior-->
-<nav class="menu-inferior">
-    <a class="recuadros-menu-inferior" href="/index.html">Inicio</a>
-    <a class="recuadros-menu-inferior" href="/personajes/todos-los-personajes-part2.html">→</a>
-</nav>
 
-<footer></footer>
 
-<script src="/resours/JavaScript/Script.js"></script>
+<!--Jquery-->  <!--ese remplazo el manejo de java  a JQuery-->
+<!--animacion de extension en los articulos ( mostar mas  )-->
+<!-- index.html -->
+<script>
+    $(document).ready(function(){
+        $(".toggle-description").click(function(){
+            $(this).siblings(".long-description").stop(true, true).slideToggle("slow");
+            var text = $(this).text() === "Mostrar más" ? "Mostrar menos" : "Mostrar más";
+            $(this).text(text);
+        });
+
+        $(".menu-aside a").click(function(event){
+            var href = $(this).attr('href');
+            if (href.startsWith("#")) {
+                event.preventDefault();
+                $('html, body').animate({
+                    scrollTop: $(href).offset().top
+                }, 500);
+            }
+        });
+
+        $(".articulos img").hover(
+            function(){
+                $(this).animate({ width: "110%" }, 200);
+            },
+            function(){
+                $(this).animate({ width: "100%" }, 200);
+            });
+  
+    });
+</script>
+
+
+
 </body>
 </html>

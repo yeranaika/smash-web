@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/resours/styles/styles.css">
+    <script src="/resours/JQuery/jquery_3.7.1.js"></script> <!-- Referencia local a jQuery -->
+    <link rel="stylesheet" href="/css/jquery-ui.css">
+    
     <title>Smash WIKI</title>
     <style>
         /* Estilos para la ventana emergente personalizada */
@@ -90,8 +93,8 @@
                     <a class="recuadros-menu-des-aside" href="/personajes/Super-Smash-Bros.(1999).html">Super Smash Bros. ( 1999)</a>
                     <a class="recuadros-menu-des-aside" href="/personajes/Super-Smash-Bros-Melee.(2001).html">Super Smash Bros. Melee (2001)</a>
                 </div>
+                <a class="recuadros-menu-aside" href="/contacto.html">Contacto</a>
             </div>
-            <a class="recuadros-menu-aside" href="/contacto.html">Contacto</a>
         </div>
     </aside>
 </div>
@@ -104,78 +107,75 @@
   </div>
 </div>
 
-<footer></footer>
 
+<!--JQuery-->
 <script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const form = document.getElementById('contact-form');
-        const modal = document.getElementById("myModal");
-        const span = document.getElementsByClassName("close")[0];
-        const modalMessage = document.getElementById("modal-message");
-
-        span.onclick = function() {
-            modal.style.display = "none";
-        }
-
-        window.onclick = function(event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
+    $(document).ready(function() {
+        const form = $("#contact-form");
+        const modal = $("#myModal");
+        const span = $(".close");
+        const modalMessage = $("#modal-message");
+    
+        span.click(function() {
+            modal.fadeOut();
+        });
+    
+        $(window).click(function(event) {
+            if ($(event.target).is(modal)) {
+                modal.fadeOut();
             }
-        }
-
-        form.addEventListener('submit', function(event) {
+        });
+    
+        form.on('submit', function(event) {
             event.preventDefault(); // Prevenir el envío del formulario
-
-            const nombre = document.getElementById('nombre').value.trim();
-            const correo = document.getElementById('correo').value.trim();
-            const mensaje = document.getElementById('mensaje').value.trim();
+    
+            const nombre = $('#nombre').val().trim();
+            const correo = $('#correo').val().trim();
+            const mensaje = $('#mensaje').val().trim();
             let errorMessage = '';
-
+    
             if (!validateName(nombre)) {
                 errorMessage += '<p class="error-message">El nombre es obligatorio y debe tener al menos 3 caracteres.</p>';
             }
-
-            const emailError = validateEmail(correo);
-            if (emailError) {
-                errorMessage += `<p class="error-message">${emailError}</p>`;
+    
+            if (!validateEmail(correo)) {
+                errorMessage += '<p class="error-message">El formato del correo no es válido.</p>';
             }
-
+    
             if (!validateMessage(mensaje)) {
                 errorMessage += '<p class="error-message">El comentario es obligatorio y debe tener al menos 10 caracteres.</p>';
             }
-
+    
             if (errorMessage !== '') {
                 showModal(errorMessage);
             } else {
                 showModal('<p>Formulario enviado correctamente</p>');
-                form.reset(); // Resetear el formulario después de la validación
+                setTimeout(function() {
+                    window.location.href = "/index.html";
+                }, 2000); // Redirigir después de 2 segundos
             }
         });
-
+    
         function validateName(name) {
             return name.length >= 3;
         }
-
+    
         function validateEmail(email) {
-            if (!email.includes('@')) {
-                return 'El correo debe contener un @.';
-            } else if (!email.includes('.')) {
-                return 'El correo debe contener un dominio (por ejemplo, .com, .cl).';
-            } else if (!email.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) {
-                return 'El formato del correo no es válido.';
-            }
-            return '';
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailPattern.test(email);
         }
-
+    
         function validateMessage(message) {
             return message.length >= 10;
         }
-
+    
         function showModal(message) {
-            modalMessage.innerHTML = message;
-            modal.style.display = "block";
+            modalMessage.html(message);
+            modal.fadeIn();
         }
     });
 </script>
+
+
 </body>
 </html>
