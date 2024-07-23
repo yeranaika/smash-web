@@ -127,7 +127,7 @@
         });
     
         form.on('submit', function(event) {
-            event.preventDefault(); // Prevenir el envío del formulario
+            event.preventDefault(); 
     
             const nombre = $('#nombre').val().trim();
             const correo = $('#correo').val().trim();
@@ -152,7 +152,7 @@
                 showModal('<p>Formulario enviado correctamente</p>');
                 setTimeout(function() {
                     window.location.href = "/index.html";
-                }, 2000); // Redirigir después de 2 segundos
+                }, 2000); 
             }
         });
     
